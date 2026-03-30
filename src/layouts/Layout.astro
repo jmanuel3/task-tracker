@@ -1,3 +1,8 @@
+---
+import "@fontsource-variable/inter-tight";
+import "@fontsource-variable/inter-tight/wght-italic.css";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,12 +16,49 @@
   <body>
     <slot />
   </body>
-</html>
 
-<style is:global>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-</style>
+  <style is:global>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-primary: #4f46e5;
+      --color-primary-hover: #6366f1;
+      --color-accent: #db2777;
+      --bg-primary: #f5f3ff;
+      --bg-secondary: #ffffff;
+      --bg-tertiary: #eef2ff;
+      --text-primary: #1e1b4b;
+      --text-secondary: #6b7280;
+      --border: #e5e7eb;
+      --sidebar-expanded: 220px;
+      --sidebar-collapsed: 50px;
+      --topbar-height: 52px;
+      --radius-card: 12px;
+      --radius-badge: 20px;
+      --radius-input: 8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-primary: #818cf8;
+        --color-accent: #f472b6;
+        --bg-primary: #0f0e1a;
+        --bg-secondary: #1a1830;
+        --bg-tertiary: #252340;
+        --text-primary: #e0e7ff;
+        --text-secondary: #a5b4fc;
+        --border: #312e81;
+      }
+    }
+
+    body {
+      font-family: "Inter Tight Variable", sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+  </style>
+</html>
