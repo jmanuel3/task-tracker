@@ -55,3 +55,20 @@
 - Sidebar activo: bg-tertiary + border-left 3px primary
 - Toggle dark/light: transición global 200ms ease
 - Modal: fade in + scale 0.95→1, overlay 40% opacity
+
+## Modal motivacional
+- Aparece al completar una tarea
+- Tamaño mediano, centrado en pantalla
+- Contenido: emoji grande + mensaje + subtexto
+- Barra de progreso inferior que indica tiempo restante
+- Desaparece solo (duración a definir al codificar)
+- Color de barra según prioridad de la tarea:
+  - Alta: #DB2777
+  - Media: #D97706
+  - Baja: #059669
+  - Perfeccionista: #4F46E5
+- Mensajes (Provisionales):
+  - Alta: 🔥 "¡Brutal! Eso no era fácil."
+  - Media: 💪 "¡Buen trabajo! Vas a un ritmo increíble."
+  - Baja: ✅ "Pequeños pasos, grandes avances."
+  - Perfeccionista: ✨ "¿En serio? ¡Eres un crack!"
