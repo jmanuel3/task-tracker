@@ -34,7 +34,8 @@ import "@fontsource-variable/inter-tight/wght-italic.css";
       --text-primary: #1e1b4b;
       --text-secondary: #6b7280;
       --border: #e5e7eb;
-      --sidebar-expanded: 220px;
+      --sidebar-expanded: 260px;
+      --sidebar-expanded-tablet: 220px;
       --sidebar-collapsed: 50px;
       --topbar-height: 52px;
       --radius-card: 12px;
@@ -59,6 +60,45 @@ import "@fontsource-variable/inter-tight/wght-italic.css";
       font-family: "Inter Tight Variable", sans-serif;
       background-color: var(--bg-primary);
       color: var(--text-primary);
+      height: 100vh;
+    }
+
+    .app-body {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    .topbar {
+      height: var(--topbar-height);
+      background-color: var(--bg-secondary);
+      display: flex;
+    }
+
+    .sidebar {
+      display: none;
+      background-color: var(--bg-tertiary);
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    @media screen and (min-width: 768px) {
+      .app-body {
+        flex-direction: row;
+      }
+
+      .sidebar {
+        display: flex;
+        width: var(--sidebar-expanded-tablet);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .sidebar {
+        width: var(--sidebar-expanded);
+      }
     }
   </style>
 </html>
